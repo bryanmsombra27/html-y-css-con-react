@@ -1,0 +1,93 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+
+
+.planes{
+    background-color: v.$secundario;
+     
+    h2{
+        @include m.headingBorder(v.$blanco,v.$primario);
+    }
+    .descripcion{
+        color: v.$blanco;
+    }
+}
+
+.nuestros-planes{
+    
+        display: flex;
+        flex-direction: column;
+
+        
+        @include m.tablet{
+            flex-direction: row;
+            max-width: 80rem;
+            // margin: 10rem auto 0 auto;
+            margin-inline: auto;
+            margin-block-start: 10rem;
+            
+        }
+    .plan{
+        background-color: v.$blanco;
+        flex-grow: 1;
+        padding: 16rem 4rem 4rem 4rem;
+        border-bottom: 1px solid #e1e1e1;
+
+        @include m.tablet{
+            border: none;
+            transition: transform .3s ease-in-out;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+
+        .precio{
+            font-size: 1.8rem;
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .listado{
+            li{
+                text-align: center;
+                margin-bottom: 2rem;
+              
+                &:last-of-type{
+                    margin-bottom: 0;
+
+                }
+            }
+        }
+
+        &.inicio{
+            @include m.iconoBg('../../../../public/img-potcast-fm/icono_inicio.svg');
+        }
+        &.pro{
+            @include m.iconoBg('../../../../public/img-potcast-fm/icono_pro.svg');
+        }
+        
+        &.negocio{
+            @include m.iconoBg('../../../../public/img-potcast-fm/icono_negocio.svg');
+            background-color: v.$primario;
+            order: -1;
+            @include m.tablet{
+                order: unset;
+                margin-top: -5rem;
+                margin-bottom: -5rem;
+                border-radius: 2rem;
+                background-position: 50% 7rem;
+                padding-top: calc(16rem + 5rem);
+                z-index: 100;
+            } 
+        }
+        
+      
+    }
+}
+
+.boton-plan{
+    @include m.boton(v.$primario,v.$secundario);
+    border: 2px solid v.$blanco;
+    margin-top: 2rem;
+    display: block;
+}

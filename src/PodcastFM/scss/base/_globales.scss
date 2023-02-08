@@ -1,6 +1,5 @@
 @use 'variables' as v; 
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+@use 'mixins' as m; 
 
 html {
     font-size: 62.5%;
@@ -14,10 +13,10 @@ body {
     font-family: v.$fuente_principal;
     font-size: 1.6rem;
 }
-
 p {
     color: v.$negro;
     font-size: 2rem;
+    line-height: 2;
 }
 .contenedor {
     width: 95%;
@@ -35,15 +34,26 @@ img {
 }
 
 h1, h2, h3 {
-    margin: 0 0 v.$separacion  0 ;
+    margin: 0 0 2rem  0 ;
 }
 h1 {
     font-size: 4rem;
 }
-h2 {
-    font-size: 3.6rem;
-}
+
 h3 {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+ul {
+    padding: 0;
+    list-style: none;
 }
 
+.seccion{
+    padding: 3rem 0;
+
+    @include m.tablet{
+        padding: 8rem 0;
+    }
+}
