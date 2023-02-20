@@ -1,0 +1,23 @@
+@use "../base/mixins" as m;
+@use "../base/variables" as v;
+
+
+.header{
+    background-image: url(../../../../public/img-airbnb/header.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 3rem 0 20rem 0;
+
+    &__busqueda{
+        margin-top: 5rem;
+        text-align: center;
+        
+        @include m.tablet{
+            margin-top: 30rem;
+
+        }
+    }
+    &__busqueda-boton{
+        @include m.boton(v.$blanco,v.$primario);
+    }
+}
