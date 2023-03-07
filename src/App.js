@@ -1,9 +1,10 @@
 import "./App.css";
-import Realstate from "./RealState/RealState";
+import CarolinaSpa from "./CarolinaSPA/CarolinaSpa";
 // import GlassMorphimsButton from "./components/buttons/GlassMorphismButton";
 // import DeliveryApp from "./DeliveryApp/DeliveryApp.jsx";
 // import PodcastFM from "./PodcastFM/PodcastFM";
 // import Airbnb from "./Airbnb/Airbnb";
+// import Realstate from "./RealState/RealState";
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       {/* <DeliveryApp /> */}
       {/* <PodcastFM /> */}
       {/* <Airbnb /> */}
-      <Realstate />
+      {/* <Realstate /> */}
+      <CarolinaSpa />
     </>
   );
 }
