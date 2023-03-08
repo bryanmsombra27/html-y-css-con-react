@@ -4,7 +4,8 @@ import ReactDOM from "react-dom/client";
 // import "./PodcastFM/scss/app.scss";
 // import "./Airbnb/scss/app.scss";
 // import "./RealState/scss/app.scss";
-import "./CarolinaSPA/scss/app.scss";
+// import "./CarolinaSPA/scss/app.scss";
+import "./Meeti/scss/app.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 

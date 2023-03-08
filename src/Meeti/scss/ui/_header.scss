@@ -1,0 +1,80 @@
+@use "../base/mixins" as m;
+@use "../base/variables" as v;
+
+.header{
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    @include  m.tablet{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.navegacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include m.tablet{
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    &__enlace{
+        margin-bottom: 2rem;
+        font-size: 1.4rem;
+        display: flex;
+        align-items: center;
+
+        @include m.tablet{
+            margin: 0;
+        }
+
+        &:last-of-type{
+            margin: 0;
+        }
+
+        &--crear{
+            font-weight: 700;
+            color: v.$primario;
+
+            @include m.tablet{
+                &::after{
+                    content:"";
+                    display: inline-block;
+                    height: 4rem;
+                    border-right: 2px solid v.$grisClaro;
+                    margin: 0 0 0 2rem;
+                }
+            }
+
+        }
+    }
+
+}
+
+.hero{
+    min-height: 60rem;
+    background-image: url(../../../../public/img-meeti/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &__texto{
+        max-width: 60rem;
+        color: v.$blanco;
+    }
+
+    &__enlace{
+        @include m.boton(v.$terciario,v.$blanco);
+    }
+
+
+}
