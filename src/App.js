@@ -8,7 +8,8 @@ import "./App.css";
 // import Airbnb from "./Airbnb/Airbnb";
 // import Realstate from "./RealState/RealState";
 // import CarolinaSpa from "./CarolinaSPA/CarolinaSpa";
-import Meeti from "./Meeti/Meeti";
+// import Meeti from "./Meeti/Meeti";
+import EscuelaCocina from "./EscuelaCocina/EscuelaCocina";
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
       {/* <Airbnb /> */}
       {/* <Realstate /> */}
       {/* <CarolinaSpa /> */}
-      <Meeti />
+      {/* <Meeti /> */}
+      <EscuelaCocina />
     </>
   );
 }
