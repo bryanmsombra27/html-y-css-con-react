@@ -1,0 +1,26 @@
+.nosotros{
+
+    &__imagen{
+        width: 100%;
+    }
+
+&__grid{
+    display: grid;
+    gap: 4rem;
+    align-items: center;
+
+    @media (min-width:768px){
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+   
+}
+&__contenido{
+    p{
+        font-size: 1.8rem;
+    }
+}
+
+
+}
+

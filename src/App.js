@@ -9,7 +9,8 @@ import "./App.css";
 // import Realstate from "./RealState/RealState";
 // import CarolinaSpa from "./CarolinaSPA/CarolinaSpa";
 // import Meeti from "./Meeti/Meeti";
-import EscuelaCocina from "./EscuelaCocina/EscuelaCocina";
+// import EscuelaCocina from "./EscuelaCocina/EscuelaCocina";
+import GuitarLA from "./GuitarLA/GuitarLA";
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
       {/* <Realstate /> */}
       {/* <CarolinaSpa /> */}
       {/* <Meeti /> */}
-      <EscuelaCocina />
+      {/* <EscuelaCocina /> */}
+      <GuitarLA />
     </>
   );
 }

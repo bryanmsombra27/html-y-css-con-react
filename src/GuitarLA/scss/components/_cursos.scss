@@ -1,0 +1,49 @@
+@use "../base/variables" as v;
+
+.cursos{
+    background-image: linear-gradient(to right, rgb(0 0 0 / .65), rgb(0 0 0 / .65)), url(../../../../public/img-guitar-la/cursos_bg.jpg);
+    padding: 10rem 0;
+    background-repeat: no-repeat;
+    margin-top: 10rem;
+    background-size: cover;
+    background-position: 50%;
+
+    &__grid{
+
+        @media (min-width:768px){
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 2rem;
+        }
+
+    }
+
+    &__texto{
+        color: v.$blanco;
+        text-align: center;
+        font-size: 2.4rem;
+    }
+    &__contenido{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-column: 2/3;
+    }
+
+    &__enlace{
+        text-decoration: none;
+        color: v.$blanco;
+        margin-top: 2rem;
+        display: inline-block;
+        border: 2px solid v.$primario;
+        padding: 1rem 5rem;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        font-weight: bold;
+        transition:background-color .3s ease-in-out;
+
+        &:hover{
+            background-color: v.$primario;
+        }
+    }
+}

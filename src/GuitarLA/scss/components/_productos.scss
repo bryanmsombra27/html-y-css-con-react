@@ -1,0 +1,106 @@
+@use "../base/variables" as v;
+
+
+.productos{
+
+    &__grid{
+        display: grid;
+        gap: 4rem;
+        
+        @media (min-width:768px){
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (min-width:1200px){
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+    }
+
+}
+
+.producto{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    column-gap: 1rem;
+    align-items: center;
+
+    &__imagen{
+        width:100%;
+    }
+&__nombre{
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+&__descripcion{
+    font-size: 1.6rem;
+}
+&__precio{
+    font-size: 6rem;
+    color: v.$primario;
+    font-weight: 900;
+    margin: 0;
+}
+&__enlace{
+    text-decoration: none;
+    margin-top:2rem ;
+    display: block;
+    color: v.$negro;
+    border: 2px solid v.$primario;
+    font-size: 1.2rem;
+    padding: 1rem 5rem;
+    transition-property: background color ;
+    transition: .5s ease-in-out;
+    font-weight: bold;
+    text-transform: uppercase;
+    &:hover{
+        background: v.$primario;
+        color: v.$blanco;
+    }
+}
+
+&__formulario{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+&__label{
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+&__cantidad {
+    border: 2px solid v.$primario;
+    padding: 1rem;
+    text-align: center;
+
+    //evento cuando se desenfoca el select
+    &:focus-visible{
+        outline: 2px solid v.$primario;
+        border: none;
+        // outline: none;
+    }
+}
+
+
+&__agregar-carrito{
+    margin-top: 3rem;
+    display: block;
+    background-color: v.$primario;
+    text-decoration: none;    
+    border: none;
+    text-align: center;
+    padding: 1rem 4rem;
+    color: v.$blanco;
+    font-size: 1.6rem;
+    font-weight: 700;
+    transition: background .3s ease-in-out;
+    cursor: pointer;
+
+    &:hover{
+        background: v.$negro;
+    }
+
+}
+
+}

@@ -1,0 +1,130 @@
+@use "../base/variables" as v;
+
+
+.header{
+    background-image: linear-gradient(to right, rgb(0 0 0 /.7 ), rgb(0 0 0 /.7 ) ),
+     url(../../../../public/img-guitar-la/header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    padding: 5rem 0;
+    position: relative;
+
+    &__guitarra{
+        display: none;
+
+        @media (min-width: 992px){
+            display: block;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            animation: mostrarGuitarra 1s ease-in-out;
+            // animation-delay: 1s;
+        }
+
+    }
+
+    &__barra{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+    }
+    &__logo{
+        width: 30rem;
+    }
+}
+
+.navegacion{
+    display: flex;
+    gap: 2rem;
+    margin-top: 5rem;
+    position: relative;
+    z-index: 1111;
+    
+    @media (min-width: 768px){
+        margin-top: 0;
+
+    }
+
+    &__enlace{
+    color: v.$blanco;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    padding: .5rem;
+    font-weight: 700;
+    transition:background .3s ease-in-out;
+
+    &:hover{
+        background: v.$primario;
+    }
+    }
+}
+
+.modelo{
+    color: v.$blanco;
+    margin-top: 5rem;
+    text-align: center;
+
+    @media (min-width: 768px){
+        text-align: left;
+        width: 50%;
+    }
+
+    &__nombre{
+        font-size: 8rem;
+    }
+
+    &__precio{
+        font-size: 6rem;
+        color: v.$primario;
+        font-weight: bold;
+        line-height: 0;
+    }
+
+    &__enlace{
+        text-decoration: none;
+        margin-top: 2rem;
+        padding: 1rem 5rem;
+        border: 2px solid v.$primario;
+        color: v.$blanco;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.4rem;
+        transition:background .3s ease-in-out;          
+
+        &:hover{
+            background: v.$primario;
+        }
+    }
+
+    &__descripcion{
+        font-size: 1.8rem;
+    }
+
+
+}
+
+@keyframes mostrarGuitarra{
+    0%{
+        opacity: 0;
+        transform:translateX(-10rem);
+    }
+    
+    50%{
+        opacity: 0;
+        
+    }
+    
+    100%{
+        opacity: 1;
+        transform:translateX(0);
+        
+    }
+}

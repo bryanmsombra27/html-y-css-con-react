@@ -1,0 +1,19 @@
+@use "./base";
+@use "./components";
+@use "./base/variables" as v;
+
+
+[class*="__contenedor"]{
+    max-width: 120rem;
+    margin: 0 auto;
+    width: 95%;
+}
+
+[class*="__heading"]{
+    font-size: 4rem;
+    text-align: center;
+    font-weight: bold;
+    color: v.$primario;
+    margin: 5rem 0;
+}
+

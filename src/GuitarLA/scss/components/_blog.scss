@@ -1,0 +1,82 @@
+@use "../base/variables" as v;
+
+
+.blog{
+    &__grid{
+        display: grid;
+        gap: 4rem;
+
+        @media (min-width:768px){
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (min-width:992px){
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+    }
+    &__grid-blog-page{
+        display: grid;
+        gap: 4rem;
+
+        @media (min-width:768px){
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (min-width:992px){
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+    }
+}
+
+
+.entrada{
+    max-width: 60rem;
+    margin: 0 auto;
+    &__imagen{
+        width: 100%;
+    }
+
+    &__titulo{
+        font-weight: 400;
+        font-size: 2.8rem;
+        margin: 0;
+        line-height: 1.2;
+    }
+
+    &__contenido{
+        padding: 2rem;
+    }
+
+    &__fecha{
+        font-size: 1.6rem;
+        color: v.$primario;
+    }
+
+    &__texto{
+        ///para cortar texto cuando es mucho
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        overflow: hidden;
+        ////
+        font-size: 1rem;
+    }
+
+    &__enlace{
+        text-decoration: none;
+        color: v.$negro;
+        margin-top: 2rem;
+        display: inline-block;
+        border: 2px solid v.$primario;
+        padding: 1rem;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: bold;
+        transition:background-color .3s ease-in-out;
+
+        &:hover{
+            background-color: v.$primario;
+            color: v.$blanco;
+        }
+    }
+}
