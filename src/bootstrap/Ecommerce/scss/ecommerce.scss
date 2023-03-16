@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap');
+
+
+/* VARIABLES*/
+$fontFamily:  'Playfair Display', serif;
+$fontFamilySecondary:'Raleway', sans-serif;
+$primary:#037bc0;
+$green:#8cbc00;
+$telefono: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+
+
+/*mixins*/
+@mixin tablet{
+    @media (min-width: $tablet){
+        @content;
+    }
+}
+
+
+
+
+/*GLOBALES*/
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: $fontFamilySecondary;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+
+
+
+h1,h2,h3{
+    font-family: $fontFamily;
+    font-weight: bold;
+}
+
+h1{
+    font-size: 3.8rem;
+
+    @media (min-width: 768px){
+        font-size: 5rem;
+    }
+}
+
+h2{
+    font-size: 3.2rem;
+
+    @include tablet{
+        font-size: 4rem;
+    }
+}
+
+h3{
+    font-size: 2.4rem;
+
+    @include tablet{
+        font-size: 3rem;
+    }
+}
+
+/*utilidades*/
+.text-primary{
+    color: $primary !important;
+}
+.bg-primary{
+    background-color: $primary !important;
+}
+.btn-success{
+    background-color: $green !important;
+}
+
+/*COMPONENTS*/
+.hero{
+    background-image: url(../../../../public/img-ecommerce/principal.jpg);
+    height: 25rem;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+
+    @include tablet{
+        height: 55rem;
+    }
+}
+
+/*PRODUCTOS*/
+.producto{
+
+    img{
+        
+        @include tablet{
+            height: 50rem;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+}
+/*CATEGORIAS */
+.categoria{
+    div{
+        overflow: hidden;
+        cursor: pointer;
+    }
+    img{
+        transition: transform .3s ease-in-out;
+            &:hover{
+
+                transform: scale(1.2);
+            }
+        }
+}

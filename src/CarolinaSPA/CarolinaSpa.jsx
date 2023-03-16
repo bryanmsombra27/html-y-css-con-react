@@ -5,6 +5,7 @@ import Header from "./components/header";
 import Horarios from "./components/horarios";
 import Productos from "./components/productos";
 import Slider from "./components/slider";
+import "./scss/app.scss";
 
 const CarolinaSpa = () => {
   return (

@@ -4,6 +4,7 @@ import Experiencias from "./components/experiencias";
 import Footer from "./components/footer";
 import Header from "./components/header";
 import Lugares from "./components/lugares";
+import "./scss/app.scss";
 
 const Airbnb = () => {
   return (

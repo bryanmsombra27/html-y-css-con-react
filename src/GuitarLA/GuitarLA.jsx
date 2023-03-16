@@ -5,6 +5,8 @@ import Main from "./pages/main";
 import Nosotros from "./pages/Nosotros";
 import Producto from "./pages/Producto";
 import Tienda from "./pages/Tienda";
+// import "./GuitarLA/scss/app.scss";
+import "./scss/app.scss";
 
 const GuitarLA = () => {
   return (

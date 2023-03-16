@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Plans from "./components/Plans";
 import Testimonials from "./components/Testimonials";
-
+import "./scss/app.scss";
 const PodcastFM = () => {
   return (
     <>

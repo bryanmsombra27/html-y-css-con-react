@@ -6,6 +6,7 @@ import Form from "./components/Form";
 import Header from "./components/Header";
 import Steps from "./components/Steps";
 import Testimonials from "./components/Testimonials";
+import "./scss/app.scss";
 
 const DeliveryApp = () => {
   return (

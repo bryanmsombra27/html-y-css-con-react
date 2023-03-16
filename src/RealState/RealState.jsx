@@ -4,6 +4,7 @@ import Footer from "./components/footer";
 import Header from "./components/header";
 import Propiedades from "./components/propiedades";
 import Testimoniales from "./components/testimoniales";
+import "./scss/app.scss";
 
 const Realstate = () => {
   useEffect(() => {

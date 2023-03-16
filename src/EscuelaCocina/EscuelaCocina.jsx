@@ -4,6 +4,7 @@ import Footer from "./components/footer";
 import Header from "./components/header";
 import Hero from "./components/hero";
 import Nosotros from "./components/nosotros";
+import "./scss/app.scss";
 
 const EscuelaCocina = () => {
   return (

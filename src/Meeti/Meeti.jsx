@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Main from "./pages/Main";
 import Metti from "./pages/Metti";
+import "./scss/app.scss";
 
 const Meeti = () => {
   return (

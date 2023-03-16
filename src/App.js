@@ -1,28 +1,15 @@
-import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Ecommerce from "./bootstrap/Ecommerce/Ecommerce";
+// import "./App.css";
 
 //COMPONENTS
 // import GlassMorphimsButton from "./components/buttons/GlassMorphismButton";
-
-// import DeliveryApp from "./DeliveryApp/DeliveryApp.jsx";
-// import PodcastFM from "./PodcastFM/PodcastFM";
-// import Airbnb from "./Airbnb/Airbnb";
-// import Realstate from "./RealState/RealState";
-// import CarolinaSpa from "./CarolinaSPA/CarolinaSpa";
-// import Meeti from "./Meeti/Meeti";
-// import EscuelaCocina from "./EscuelaCocina/EscuelaCocina";
-import GuitarLA from "./GuitarLA/GuitarLA";
+// import MainMenu from "./main-menu/menu";
 
 function App() {
   return (
     <>
-      {/* <DeliveryApp /> */}
-      {/* <PodcastFM /> */}
-      {/* <Airbnb /> */}
-      {/* <Realstate /> */}
-      {/* <CarolinaSpa /> */}
-      {/* <Meeti /> */}
-      {/* <EscuelaCocina /> */}
-      <GuitarLA />
+      <Ecommerce />
     </>
   );
 }
