@@ -116,3 +116,19 @@ h3{
             }
         }
 }
+
+/*GALERIA*/
+.galeria li {
+    margin-bottom: 1rem;
+
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+}
+
+/*CONTACTO*/
+.form-control{
+    padding: 1rem;
+    font-size: 1.6rem;
+}
+

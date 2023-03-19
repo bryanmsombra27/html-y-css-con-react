@@ -1,19 +1,29 @@
-import Categorias from "./components/categorias";
-import Footer from "./components/footer";
-import Header from "./components/header";
-import Hero from "./components/hero";
-import Productos from "./components/productos";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Blog from "./pages/blog";
+import Contacto from "./pages/contacto";
+import Entrada from "./pages/entrada";
+import Galeria from "./pages/galeria";
+
+import Main from "./pages/main";
+import Nosotros from "./pages/nosotros";
+import Tienda from "./pages/tienda";
 
 import "./scss/ecommerce.scss";
 
 const Ecommerce = () => {
   return (
     <>
-      <Header />
-      <Hero />
-      <Productos />
-      <Categorias />
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/nosotros" element={<Nosotros />} />
+          <Route path="/tienda" element={<Tienda />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/entrada" element={<Entrada />} />
+          <Route path="/galeria" element={<Galeria />} />
+          <Route path="/contacto" element={<Contacto />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 };
