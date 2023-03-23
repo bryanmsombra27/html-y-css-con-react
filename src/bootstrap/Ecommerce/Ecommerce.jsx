@@ -1,4 +1,5 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { useEffect } from "react";
+import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 import Blog from "./pages/blog";
 import Contacto from "./pages/contacto";
 import Entrada from "./pages/entrada";
@@ -11,19 +12,13 @@ import Tienda from "./pages/tienda";
 import "./scss/ecommerce.scss";
 
 const Ecommerce = () => {
+  useEffect(() => {
+    document.querySelector("html").className = "ecommerce";
+  }, []);
+
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/nosotros" element={<Nosotros />} />
-          <Route path="/tienda" element={<Tienda />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/entrada" element={<Entrada />} />
-          <Route path="/galeria" element={<Galeria />} />
-          <Route path="/contacto" element={<Contacto />} />
-        </Routes>
-      </BrowserRouter>
+      <Outlet />
     </>
   );
 };

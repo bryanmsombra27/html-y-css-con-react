@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+$fontFamily: 'Roboto', sans-serif;
+$telefono: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+
+$rojo:#f34f51;
+$verde:#0098ae;
+$oscuro:#212121;
+$gris:#b5b5b5;
+
+
+
+//asignar paleta de color a bootstrap
+
+
+
+/*mixins*/
+@mixin tablet{
+    @media (min-width: $tablet){
+        @content;
+    }
+}
+
+
+/*UTILIDADES*/
+.primary{
+    color: $rojo !important;
+}
+
+.secondary{
+    color: $verde !important;
+}
+
+.dark{
+    color: $oscuro !important;
+}
+
+.btn-secundario{
+    background-color: $verde !important;
+}
+
+/*GLOBALES*/
+html{
+    // font-size: 62.5%;
+}
+
+body{
+    font-family: $fontFamily;
+    font-size: 1.6rem;
+    // line-height: 2;
+}
+
+h1.meeti-title,h2.meeti-title,h3.meeti-title{
+    font-family: $fontFamily;
+    font-weight: bold;
+}
+
+/*HEADER*/
+.header{
+    padding-block: 3rem;
+    
+    @include tablet{
+        
+        padding-block: 5rem;
+    }
+
+    &__logo{
+        width: 25rem;
+    }
+
+}
+
+/*FUNCIONAMIENTO*/
+.eventos{
+    
+    .card{
+        cursor: pointer;
+        border: none !important;
+
+        img{
+            border-radius: 15px;
+        }
+        .fecha{
+            color: #877457;
+            font-size: 1rem !important;
+        }
+    }
+}
+
+/*FOOTER*/
+.footer-meeti {
+    a{
+        color: $gris;
+        font-size: 1.2rem;
+        padding: .5rem 0;
+        &:hover{
+            
+            color: darken($gris,10%);
+        }
+    }
+}
