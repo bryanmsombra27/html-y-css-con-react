@@ -1,0 +1,283 @@
+$verde:#84d9bc;
+$gris:#313c4e;
+$telefono: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+
+
+@mixin bgImage($url,$color){
+    background-image: linear-gradient(transparentize($color, .3%) 0%,transparentize($color, .3%) 100% ), url($url);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+@mixin iconImage($url){
+background-image: url($url);
+background-size: 10rem;
+background-position: 50% 2rem;
+background-repeat: no-repeat;
+}
+
+*{
+    font-size: 62.5%;
+}
+p,li,a{
+    font-size:1.8rem;
+}
+
+@mixin telefono {
+    @media (min-width: $telefono) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: $tablet) {
+        @content;
+    }
+}
+  
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin headingBorder($color,$borderColor){
+    // border-bottom: 5px solid $color;
+    color: $color;
+    // position: relative;
+    display: inline-block;
+    
+    &::after{
+        content:"";
+        width:100%;
+        height: 1rem;
+        background-color: $borderColor;
+        display: block;
+        margin-top: -1rem;
+    }
+
+}
+
+
+.site-header{
+    @include bgImage("../../../../public/img-potcast-fm/header.jpg",$gris); 
+
+    .logo{
+        max-width: 20rem;
+        margin: 0 auto;
+        @include tablet{
+            margin: 0;
+        }
+    }
+
+    .contenido{
+        padding-top:10rem;
+        padding-bottom:10rem;
+
+        @include desktop{
+            padding-top: 15rem;
+            padding-bottom: 15rem;
+        }
+
+        h1{
+            font-size: 4.5rem;
+            color: white;
+           
+            @include tablet{
+                max-width: 50%;
+                font-size: 6rem;
+            }
+            @include desktop{
+                max-width: 40%;
+                
+            }
+        }
+    }
+}
+.btn-header{
+    background-color: $verde;
+    color: $gris;
+    padding: 1rem 5rem;
+    font-size: 2rem;
+    border-radius: 0;
+    margin-top: 3rem;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    @include tablet{
+        display: inline-block;
+    }
+    &:hover{
+        background-color: darken($verde, 10%);
+        color: darken($gris,10%);
+
+    }
+
+}
+
+.py-5{
+    padding: 15rem auto;
+}
+.bg-primary{
+    background-color: $verde !important;
+}
+
+.crea-podcast{
+    h2{
+        @include headingBorder($gris,$verde);
+        font-weight: bold;
+        font-size: 3.6rem;
+        margin-top: 5rem;
+        @include tablet{
+            margin-top: 0;
+
+        }
+    }
+}
+
+.beneficios{
+
+    h2{
+        font-weight: bold;
+        font-size: 3.6rem;
+        @include headingBorder($gris,white );
+    }
+
+    .imagen{
+        // animation: .3s ease-in-out transform;
+        transition: .3s ease-in-out transform;
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.1) rotate(8deg);
+            
+        }
+    }
+}
+.stadistics{
+    h2{
+        @include headingBorder($gris,$verde);
+        font-size: 3.6rem;
+        font-weight: bold;
+        
+    }
+}
+
+.planes{
+    h2{
+        @include headingBorder(white,$verde);
+        font-weight: bold;
+        font-size: 3.6rem;
+    }
+}
+
+.plan{
+    padding: 16rem 4rem 4rem 4rem;
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+    .precio{
+        font-weight: bold;
+        text-transform: uppercase;
+       
+    }
+    &:hover{
+        transform: scale(1.1);
+    }
+
+    &.negocio{
+        z-index: 10000;
+        
+        @include tablet{
+            margin-top: -5rem;
+            margin-bottom: -5rem;
+            border-radius: 2rem;
+            @include iconImage("../../../../public/img-potcast-fm/icono_negocio.svg");
+            padding-top: calc(16rem + 5rem);
+            background-position: 50% 7rem;
+        }
+    }
+    &.inicio{
+        @include iconImage("../../../../public/img-potcast-fm/icono_inicio.svg");
+    }
+    &.pro{
+        @include iconImage("../../../../public/img-potcast-fm/icono_pro.svg");
+    }
+    
+}
+
+.boton-plan{
+    font-size: 1.6rem;
+    // background-color: darken($verde,20%);
+    background-color: $verde;
+    display: block;
+    font-weight: bold;
+    border: 1px solid white;
+    padding: 1rem 2rem;
+}
+
+.testimoniales{
+    h2{
+        @include headingBorder($gris,$verde );
+        font-size: 3.6rem;
+        font-weight: bold;
+    }
+}
+
+.testimonial{
+    font-size: 1.6rem;
+    border: 5px solid $gris;
+    border-radius: 1rem;
+    padding:2rem 2rem 2rem 6rem;
+    position: relative;
+
+    &::before{
+        content: "";
+        background-image: url("../../../../public/img-potcast-fm/comilla.svg");
+        width: 4rem;
+        display: block;
+        height: 4rem;
+        background-repeat: no-repeat;
+        background-position: center center;
+        font-size: 1.6rem;
+        position: absolute;
+        top: 0;
+        left: 5px;
+    }
+}
+
+
+.footer{
+    background: $gris;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+    @include tablet{
+        text-align: left;
+    }
+    &__container{
+        // @extend .container-xl;
+    }
+
+
+    &__widget{
+        h3{
+            color: $verde;
+            font-weight: bold;
+            padding: 1rem 0;
+            font-size: 2.8rem;
+            text-transform: uppercase;
+        }
+    }
+    &__nav{
+        display: flex;
+        flex-direction:column;
+        a{
+            text-decoration: none;
+            color: white;
+            margin-top: 1.2rem;
+        }
+    }
+}

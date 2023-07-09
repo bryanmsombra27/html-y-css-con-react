@@ -2,13 +2,9 @@ import { useEffect } from "react";
 import { Link, Outlet } from "react-router-dom";
 
 const MainMenu = () => {
-  // useEffect(() => {
-  //   document.querySelector("html").className = "";
-  // }, []);
-
   return (
     <>
-      <nav className="navegacion-principal">
+      <nav className="navegacion-principal" id="navegacion-proyectos">
         {/* <Link to="/">DeliveryApp</Link>
         <Link to="/PodcastFM">PodcastFM</Link>
         <Link to="/Airbnb">Airbnb</Link>
@@ -20,6 +16,7 @@ const MainMenu = () => {
 
         <Link to="/">Ecommece</Link>
         <Link to="/Meeti">Meeti</Link>
+        <Link to="/Podcast">PodcastFM</Link>
       </nav>
 
       <Outlet />
