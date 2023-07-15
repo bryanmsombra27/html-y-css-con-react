@@ -13,7 +13,8 @@ import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 //COMPONENTS
 // import GlassMorphimsButton from "./components/buttons/GlassMorphismButton";
 // import MainMenu from "./main-menu/menu";
-import PodcastFM from "./bootstrap/PodcastFM/Podcast";
+// import PodcastFM from "./bootstrap/PodcastFM/Podcast";
+import UdemyApp from "./bootstrap/Udemy/Udemy";
 
 function App() {
   return (
@@ -40,7 +41,8 @@ function App() {
           <Route path="/Podcast" element={<PodcastFM />} />
         </Routes>
       </BrowserRouter> */}
-      <PodcastFM />
+      {/* <PodcastFM /> */}
+      <UdemyApp />
     </>
   );
 }
